@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./styles.css" />
+    <title>About Us</title>
+  </head>
+
+  <body>
+    <style>
+      body {
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+          ),
+          url("./images/about-background.jpg");
+        height: 100vh;
+  	background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .members {
+        width: 90%;
+      }
+
+      .name {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        margin: 20px;
+      }
+
+      .info-member {
+        padding: 5px;
+        color: white;
+        margin: 20px;
+        font-size: 1.3rem;
+        line-height: 140%;
+        border-bottom: 1px solid white;
+      }
+      
+
+
+
+      .overlay, .overlay2 {
+      background:rgba(0,0,0,0.8);
+      opacity:0.8;
+      filter:alpha(opacity=80);
+      position:fixed;
+      top:0px;
+      bottom:0px;
+      left:0px;
+      right:0px;
+      z-index:100;
+    }
+
+      .popup, .popup2{
+      background:white;
+      position:fixed;
+      top:0;
+      left:0;
+      bottom:0;
+      right:0;
+      z-index:101;
+      width:40%; /*Change your width here*/
+      height:80%; /*Change your height here*/
+      margin:auto;
+      color: black;
+      
+      }
+
+      .popup-inner{
+      position:relative;
+      padding:1em;
+      }
+      input.s3-btn-close{
+      position:absolute;
+      top:-0.5em;
+      right:-0.5em;
+      
+      background:black;
+      border:solid 2px white;
+      color:white;
+      cursor:pointer;
+      
+      border-radius:15px;
+      
+      outline:none;
+      }
+
+      input.s3-btn{
+        background:#f1f1f1;
+        border:none;
+        width:200px;
+        height:50px;
+        cursor:pointer;
+        
+        margin:auto;
+      }
+      .s3-center{
+  text-align:center;
+}
+@media only screen and (max-width: 600px) {
+  .popup-inner{
+      position:relative;
+      padding:1em;
+      font-size: 0.8rem;
+      }
+}
+@media only screen and (max-width: 475px) {
+  .popup-inner{
+      
+      font-size: 0.6rem;
+      }
+}
+    </style>
+    <nav id="nav">
+      <div class="nav-content">
+        <h2 class="brand"><a href="./index.html">Jaisalmer, Rajasthan</a></h2>
+        <ul class="nav-items">
+          <li><a href="./index.html" class="nav-item">Home</a></li>
+          <li><a href="./about.html" class="nav-item">About</a></li>
+          <li><a href="./register.html" class="nav-item">Register</a></li>
+          <span><li><a href="./solution.html" class="nav-item">Solution</a></li></span>
+        </ul>
+      </div>
+    </nav>
+    <div class="members">
+      <div class="name">
+	<h1>Shashwat Dubey</h1>
+        <span>Tour Head </span>
+      </div>
+      <div class="info-member">
+        <p>
+	<img src="./images/shashwat.jpeg" width="200"> <br>
+ 	As always, the most important part of your journey to Jaisalmer is to have a good guide, who knows every corner in this walled city,
+	and willing to share his stories with you. Mr. Saksham Chauhan is one such person. <br>
+	<b> Languages:</b>  English & Hindi<br>
+	<b> Experience: </b> 5 years & 3 months<br>
+	<b> Phone No. </b> +91 9454829687<br>
+	</p>
+  <!-- Overlay -->
+<div class="overlay" id="overlay" style="display:none;"></div>
+
+<!-- Popup -->
+<div class="popup" id="popup" style="display:none;">
+  <div class="popup-inner">
+    <input type="button" name="Close" class="s3-btn-close" onclick="popupClose();" value="&times;">
+    
+    <h2>REVIEWS</h2><br/>
+    <p>Review 1: <b>Mr. Vikram Bhatt</b><br>Exemplary guide, with plenty of knowledge on the city's entire history. From the
+    control of the first King to the freedom struggles involved.</p><br/>
+    <p>Review 2: <b>Mr. Sunil Yadav</b><br>Knowledgable guide, with excellent taste of antiques.</p><br/>
+    <p>Review 3: <b>Mr. Ramesh Pal</b><br>Go to guide for your Jaisalmer trip, don't think twice just hire him</p>
+
+
+  </div>
+</div>
+
+<!-- Popup Button -->
+ <input type="button" class="s3-btn" name="Open" onclick="popupOpen();"  value="SHOW REVIEWS">  
+
+</div>
+      <div class="name">
+        <h1>Rhea Banerjee</h1>
+        <span>Tour Guide</span>
+      </div>
+      <div class="info-member">
+	<p>
+	<img src="./images/VIT_ID.jpg" width="200"> <br>
+ 	As always, the most important part of your journey to Jaisalmer is to have a good guide, who knows every corner in this walled city,
+	and willing to share his stories with you. Mr. Swapnil Bhartiya is one such person. <br>
+	<b> Languages:</b>  English, French & Spanish<br>
+	<b> Experience: </b> 1 years & 4 months<br>
+	<b> Phone No. </b> +91 9098000407<br>
+	</p>
+
+    <!-- Overlay -->
+<div class="overlay2" id="overlay2" style="display:none;"></div>
+
+<!-- Popup -->
+<div class="popup2" id="popup2" style="display:none;">
+  <div class="popup-inner">
+    <input type="button" name="Close" class="s3-btn-close" onclick="popup2Close();" value="&times;">
+    
+    <h2>REVIEWS</h2><br/>
+    <p>Review 1: <b>Mr. Rajev Singh</b><br>Young and energetic guide would show you the tour with full enthusiasm.</p><br/>
+    <p>Review 2: <b>Mr. Geeta Kumari</b><br>Your Go to guide for city fun, shows the history and the future at the same time.</p><br/>
+    
+
+
+  </div>
+</div>
+
+<!-- Popup Button -->
+ <input type="button" class="s3-btn" name="Open" onclick="popup2Open();"  value="SHOW REVIEWS">  
+
+      </div>
+      
+    </div>
+    <footer>
+      <p>VIT Bhopal Travels, All Rights Reserved 2021 &copy; Last Updated: march 22 , 2022</p>
+    </footer>
+    <script src="./about.js"></script>
+
+  </body>
+
+</html>

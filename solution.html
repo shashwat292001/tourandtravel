@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./styles.css" />
+    <title>About Us</title>
+  </head>
+
+  <body>
+    <style>
+      body {
+        
+        height: 100vh;
+  	background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .members {
+        width: 90%;
+      }
+
+      .name {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        margin: 20px;
+      }
+
+      .info-member {
+        padding: 5px;
+        color: white;
+        margin: 20px;
+        font-size: 1.3rem;
+        line-height: 140%;
+        border-bottom: 1px solid white;
+      }
+      
+
+
+
+        table {
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        table-layout: fixed;
+        color: black;
+        }
+
+            table caption {
+            font-size: 1.5em;
+            margin: .5em 0 .75em;
+            }
+
+            table tr {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            padding: .35em;
+            }
+
+            table th,
+            table td {
+            padding: .625em;
+            text-align: center;
+            }
+
+            table th {
+            font-size: .85em;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            }
+            input {
+        padding: 5px 10px;
+        margin: 15px;
+        border-radius: 25px;
+        box-shadow: 1px 3px rgba(0,0,0,.3);
+        border: 0px solid black;
+        height:35px; 
+        font-size:15pt;
+        color: black;
+      }
+      #inr{
+          color:white;
+      }
+
+
+      select{
+        border-radius: 20px;
+      }
+
+      button {
+        display: block;
+        padding: 5px 10px;
+        margin: 10px;
+        font-size: 16px;
+        border-radius: 10px;
+      }
+      .name{
+        width: 90%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        margin: 50px auto;
+        justify-self: center;
+        
+      }
+
+    </style>
+    <nav id="nav">
+      <div class="nav-content">
+        <h2 class="brand"><a href="./index.html">Jaisalmer, Rajasthan</a></h2>
+        <ul class="nav-items">
+          <li><a href="./index.html" class="nav-item">Home</a></li>
+          <li><a href="./about.html" class="nav-item">About</a></li>
+          <li><a href="./register.html" class="nav-item">Register</a></li>
+          <li><a href="./solution.html" class="nav-item">Solution</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="members">
+        <div class="name">
+      <h1></h1>
+      <div>
+        <table>
+            <caption style=" border: 2px solid black; background-color: white;">Conversion Rate</caption>
+            <thead>
+              <tr>
+                <th scope="col">Foreign Currency</th>
+                <th scope="col">INR</th>
+                <th scope="col">Select</th>
+
+              </tr>
+            </thead>
+            <tbody>
+
+            <form>
+              <tr>
+                <td data-label="Account">1 USD</td>
+                <td data-label="Due Date">73.40 INR</td>
+                <td>
+                    <div class="radio">
+                    <label><input type="radio" id='usd' name="optradio">USD - INR</label>
+                    </div>
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" data-label="Account">1 GBP</td>
+                <td data-label="Due Date">101.23 INR</td>
+                <td>
+                    <div class="radio">
+                     <label><input type="radio" id='gbp' name="optradio">GBP - INR</label>
+                    </div>
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" data-label="Account">1 EURO</td>
+                <td data-label="Due Date">86.97 INR</td>
+                <td>
+                    <div class="radio">
+                        <label><input type="radio" id='eur' name="optradio">EUR - INR</label>
+                    </div>
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" data-label="Acount">1 CNY</td>
+                <td data-label="Due Date">11.35 INR</td>
+                <td>
+                    <div class="radio">
+                        <label><input type="radio" id='cny' name="optradio">CNY - INR</label>
+                    </div>
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" data-label="Acount">1 AED</td>
+                <td data-label="Due Date">19.98 INR</td>
+                <td>
+                    <div class="radio">
+                        <label><input type="radio" id='aed' name="optradio">AED - INR</label>
+                    </div>
+                </td>
+              </tr>
+            
+            </tbody>
+          </table>
+      </div>
+      <div class="conversion-input">
+        ENTER AMOUNT TO CONVERT - <span id = "currency"></span>
+        <input type="text" id="cur-to" name="text" placeholder="000"/>
+        INR - 
+        <input type="text" id="inr" name="text" placeholder="000" disabled/>
+        <input type="button" value="convert" onclick="convert();"><br/>
+
+      </div>
+    </form>
+    </div>
+</div>
+    <footer>
+      <p>VIT Bhopal Travels, All Rights Reserved 2022 &copy; Last Updated: March 22, 2022</p>
+    </footer>
+    <script src="./solution.js"></script>
+
+  </body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Jaisalmer, Rajasthan</title>
+  </head>
+  <body>
+    <style>
+      input {
+        padding: 5px 10px;
+        margin: 15px;
+        border-radius: 25px;
+        box-shadow: 1px 3px rgba(0,0,0,.3);
+        border: 0px solid black;
+        height:35px; 
+        font-size:15pt;
+        color: black;
+      }
+      
+      select{
+        border-radius: 20px;
+      }
+
+      button {
+        display: block;
+        padding: 5px 10px;
+        margin: 10px;
+        font-size: 16px;
+        border-radius: 10px;
+      }
+      #cost{
+        color: white;
+        display: block;
+        font-family: 'Futura', Tahoma, Geneva, Verdana, sans-serif;
+        letter-spacing: 2px;
+        padding: 10px;
+        text-align: center;
+        background: black;
+        background-image: linear-gradient(45deg, #772f1a 74%, #f2a65a 0%);
+
+      }
+
+    </style>
+    <nav id="nav">
+      <div class="nav-content">
+        
+        <ul class="nav-items">
+          <li><a href="./index.html" class="nav-item">Home</a></li>
+          <li><a href="./about.html" class="nav-item">About</a></li>
+          <li><a href="./register.html" class="nav-item">Register</a></li>
+          <li><a href="./solution.html" class="nav-item">Solution</a></li>
+        </ul>
+      </div>
+    </nav>
+    <header class="head">
+      <h2 class="brand brand-name"><a href="./index.html">Jaisalmer, Rajasthan</a>
+      </h2>
+    </header>
+    <section class="places">
+      <div class="card card1">
+        <img src="./images/gadisar lake.jpg" class="image"></img>
+        <p class="location">Gadisar Lake</p>
+        <div class="infos">
+          <div class="info">
+            <h3>Built By:</h3>
+            <p>King Rawal Jaisal</p>
+          </div>
+          <div class="info">
+            <h3>Built In:</h3>
+            <p>1156 AD</p>
+          </div>
+          <div class="info">
+            <h3>Fact:</h3>
+            <p>It is said that this lake once provided water to the entire city. Presently, the water comes in the Gadisar Lake from Indira Gandhi Canal, so it never dries.</p>
+          </div>
+        </div>
+        <button id="likes">Like❤️</button>
+      </div>
+      <div class="card card2">
+        <img src="./images/jain temples.webp" class="image"></img>
+        <p class="location">Lodhurva Jain temple</p>
+        <div class="infos">
+        <div class="info">
+          <h3>Built By:</h3>
+          <p> Rawal Deoraj</p>
+        </div>
+        <div class="info">
+          <h3>Built In:</h3>
+          <p> 8th−9th century CE</p>
+        </div>
+        <div class="info">
+          <h3>Fact:</h3>
+          <p>Lodhurva is one of the important Jain center. </p>
+        </div>
+        <button id="likes-2">Like❤️</button>
+      </div>
+      </div>
+      <div class="card card3">
+        <img src="./images/jaisalmer-fort.jpg" class="image"></img>
+        <p class="location">Jaisalmer Fort</p>
+        <div class="infos">
+          <div class="info">
+            <h3>Built By:</h3>
+            <p> Rajput Rawal Jaisal</p>
+          </div>
+          <div class="info">
+            <h3>Built In:</h3>
+            <p> 1156 AD</p>
+          </div>
+          <div class="info">
+            <h3>Fact:</h3>
+            <p>Jaisalmer Fort is the second oldest fort in Rajasthan, built in 1156 AD by the Rajput Rawal (ruler) Jaisal from whom it derives its name, and stood at the crossroads of important trade routes (including the ancient Silk road).</p>
+          </div>
+        </div>
+        <button id="likes-3">Like❤️</button>
+      </div>
+      
+    </section>
+    <section>
+      <div class = "Cost-dropdown">
+        
+          <form>  
+          <p id="cost" ><b> Please Select a package to know the cost</b> 
+          <select id = "tourList" onchange = "tourListdrop()" >  
+          <option> ---Select Package--- </option>  
+          <option> Gadisar Lake </option>  
+          <option> Lodhuarva Jain Temple </option>  
+          <option> Jaisalmer Fort </option>   
+          </select> </p> <br>
+          <p id="cost" ><span id = "cost-name"></span> <span id="cost-val"></span>
+         </p>  
+          </form>  
+          
+
+      </div>
+    </section>
+    <section class="jaisalmer"><h1>About Jaisalmer</h1>
+      <p class="about-jaisalmer"> Jaisalmer, nicknamed "The Golden city", is a city in the Indian state of Rajasthan, located 575 kilometres (357 mi) west of the state capital Jaipur. The town stands on a ridge of yellowish sandstone and is crowned by the ancient Jaisalmer Fort. This fort contains a royal palace and several ornate Jain temples. Many of the houses and temples of both the fort and of the town below are built of finely sculptured sandstone. The town lies in the heart of the Thar Desert (the Great Indian Desert) and has a population, including the residents of the fort, of about 78,000. It is the administrative headquarters of Jaisalmer District. Jaisalmer was once the capital of Jaisalmer State.</p>
+      <p class="about-jaisalmer"> Jaisalmer is named after Rawal Jaisal, a Bhati ruler who founded the city in 1156 AD. Jaisalmer means the Hill Fort of Jaisal. Jaisalmer is sometimes called the "Golden City of India" because the yellow sandstone used throughout the architecture of both the fort and the town below, imbues both with a certain golden-yellow light.</p>
+
+    </section>
+    <footer>
+      <p> VIT Bhopal travels, All Rights Reserved 2022 &copy; Last Updated: march 22, 2022</p>
+    </footer>
+    <script src="./home.js"></script>
+
+  </body>
+
+</html>

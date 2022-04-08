@@ -1,0 +1,187 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #772f1a;
+  background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
+  display: flex;
+  flex-direction: column;
+}
+
+.head {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./images/sergio-capuzzimati-DL-4g1jvG_o-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  height: calc(100vh - 77px);
+  width: 100%;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  padding: 30px;
+  background-color: #662511;
+  color: white;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  z-index: 100;
+
+}
+
+.nav-content {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  color: white;
+  margin: auto;
+  
+
+}
+
+.brand a {
+  padding: 10px 25px;
+  text-decoration: none;
+  color: white;
+  margin-right: auto;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 800;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+.brand-name{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+}
+.nav-items {
+  list-style: none;
+  display: flex;
+  margin: auto 0 auto auto;
+}
+
+.nav-item {
+  text-decoration: none;
+  border-radius: 10px;
+  color: white;
+  background-color:saddlebrown;
+  padding: 5px;
+  font-size: 1.2rem;
+  margin: 0 10px;
+  box-shadow: 2px 2px  rgba(0, 0, 0, 0.2);
+}
+
+.nav-item:hover {
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+.places {
+  width: 100%;
+  display: flex;
+  margin: 30px 0;
+}
+
+.card {
+  width: 30%;
+  height: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 10px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  background-color: white;
+}
+
+.card .image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.card .location {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 5.5%;
+  font-size: 20px;
+  border-radius: 5px;
+  transform: translateY(-50%);
+  padding: 5px 10px;
+  background-color: black;
+  color: white;
+}
+
+.infos {
+  margin-top: -5px;
+  justify-content: stretch;
+}
+
+.info {
+  display: flex;
+}
+
+.info p {
+  font-weight: bold;
+}
+
+.info p,
+.info h3 {
+  padding: 3px;
+}
+
+.jaisalmer {
+  width: 90%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 50px auto;
+  justify-self: center;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.jaisalmer h1 {
+  margin-top: 30px;
+  font-size: 3rem;
+  text-align: center;
+  padding: 5px;
+}
+
+.about-jaisalmer {
+  margin: auto;
+  display: block;
+  font-size: 1.4rem;
+  width: 100%;
+  padding: 10px;
+  line-height: 150%;
+  margin-bottom: 30px;
+}
+
+footer {
+  color: white;
+  padding: 10px;
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+  border-top: 1px solid white;
+}
+
+@media only screen and (max-width: 705px) {
+  .card {
+    font-size: 0.7rem;
+  }
+  .nav-content {
+    
+    display: inline;
+  }
+
+}
+

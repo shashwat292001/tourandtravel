@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Register</title>
+  </head>
+
+  <body>
+    <style>
+      body {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .details {
+        color: white;
+        font-size: 1.5rem;
+        /* display: flex; */
+        /* flex-direction: column; */
+      }
+
+      .details h1 {
+        padding: 10px;
+        margin: 10px;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      label {
+        
+        color: white;
+        display: block;
+        font-family: 'Futura', Tahoma, Geneva, Verdana, sans-serif;
+        letter-spacing: 2px;
+      }
+
+      input {
+        padding: 5px 10px;
+        margin: 15px;
+        border-radius: 25px;
+        box-shadow: 1px 3px rgba(0,0,0,.3);
+        border: 0px solid black;
+        height:35px; 
+        font-size:15pt;
+      }
+      select{
+        border-radius: 20px;
+      }
+
+      button {
+        display: block;
+        padding: 5px 10px;
+        margin: 10px;
+        font-size: 16px;
+        border-radius: 10px;
+      }
+
+      form {
+        padding-top: 25%;
+        height: 70%;
+      }
+      #address{
+        height: 90px;
+        }
+      .page-content {
+        min-height: calc(100vh - 39.2px);
+      }
+      /*input verifictation*/
+      #fname-error,#lname-error,#phone-error,#address-error,#tour-error{
+        color:rgba(168, 2, 2, 0.952);
+      }
+  
+    </style>
+    <nav id="nav">
+      <div class="nav-content">
+        <h2 class="brand"><a href="./index.html">Jaisalmer, Rajasthan</a></h2>
+        <ul class="nav-items">
+          <li><a href="./index.html" class="nav-item">Home</a></li>
+          <li><a href="./about.html" class="nav-item">About</a></li>
+          <li><a href="./register.html" class="nav-item">Register</a></li>
+          <li><a href="./solution.html" class="nav-item">Solution</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="page-content">
+      <div id="show" class="details hidden">
+        <h1>Welcome <span id="user_name"></span></h1>
+        <h1>Your Phone Number Is: <span id="user_phone"></span></h1>
+        <h1>Your Address Is: <span id="user_address"></span></h1>
+        <h1>Your Selected Date Is: <span id="user_date"></span></h1>
+        <h1>Your Chosen Time Is: <span id="user_time"></span></h1>
+        <h1>Your Preferred Language Is: <span id="user_language"></span></h1>
+        <h1>Tour Selected: <span id="user_tour"></span></h1>
+        <h1>Price after Tax Reduction:  <span id="user_cost"></span></h1>
+        <button onclick="location.href='./index.html'">Cancel</button>
+      </div>
+      <form id="form">
+        <div>
+          <!-- First Name -->
+          <label for="text" class="leading-7 text-sm text-gray-100" place>First Name</label>
+          <input type="text" id="f_name" name="text" placeholder="First Name"/><br/>
+          <span id="fname-error"></span>
+          <!-- Last  Name -->
+          <label for="text">Last Name</label>
+          <input type="text" id="l_name" name="text" placeholder="Last Name" /><br/>
+          <span id="lname-error"></span>
+          <!-- Phone -->
+          <label for="number">Phone</label>
+          <input
+            type="number"
+            autocomplete="off"
+            id="phone"
+            maxlength="10"
+            name="number"
+            placeholder="123-456-789"
+          /><br/>
+          <span id="phone-error"></span>
+          <!-- Address -->
+          <label for="text">Address</label>
+          <input type="text" id="address" name="address" placeholder="Delhi" /><br/>
+          <span id="address-error"></span>
+          <!-- Date -->
+          <label for="date">Date</label>
+          <input type="date" id="date" name="text" required /><br/>
+          <span id="date-error"></span>
+          <!-- Time -->
+          <label for="text">Set Time Slot</label>
+	<select name="text" id="time"style="padding:10px; margin:10px" >
+  	   <option>9:00-11:00</option>
+     	<option>11:00-13:00</option>
+     	<option>13:00-15:00</option>
+     	<option>15:00-17:00</option>
+	</select>         
+  
+	<!-- Language -->
+          <label for="text">Select Language</label>
+          <select id="language" name="language" style="padding:10px; margin:10px" >
+		<option>English</option>
+		<option>Hindi</option>
+		<option>Urdu</option>		
+		<option>French</option>
+		<option>Spanish</option>
+		</select>
+
+    <!-- Package Selection-->
+    <label for="text">Select Tour</label>
+    <select id = "tourList" name="tourList" style="padding:10px; margin:10px" required>  
+      <option> ---Select Package--- </option>  
+      <option> Gadisar Lake - Rs10000 </option>  
+      <option> Lodhuarva Jain Temple - Rs12000 </option>  
+      <option> Jaisalmer Fort - Rs14000 </option>   
+      </select><br/>
+      <span id="tour-error"></span>
+          <button type="submit">Save And Submit</button>
+        </div>
+      </form>
+    </div>
+    <footer>
+      <p>VIT Bhopal Treavels, All Rights Reserved 2022 &copy; Last Updated: March 22, 2022</p>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
